@@ -1,0 +1,31 @@
+{
+  "esversion": 6,
+  "browser": true,
+  "node": false,
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "globals": {
+    "window": false,
+    "document": false,
+    "navigator": false,
+    "console": false,
+    "setTimeout": false,
+    "clearTimeout": false,
+    "setInterval": false,
+    "clearInterval": false,
+    "performance": false,
+    "IntersectionObserver": false,
+    "fetch": false,
+    "FormData": false,
+    "File": false,
+    "FileReader": false,
+    "Blob": false,
+    "URL": false,
+    "URLSearchParams": false,
+    "Headers": false,
+    "Response": false,
+    "Request": false
+  }
+}
+
