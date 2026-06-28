@@ -18,26 +18,14 @@ export default async function AccountPage() {
         <h1 className="text-3xl font-bold mb-6">Account Overview</h1>
 
         <div className="space-y-4 text-lg">
+          <p>Plan: {planData.plan}</p>
+          <p>Monthly Credits: {planData.monthlyCredits}</p>
+          <p>Credits Remaining: {planData.creditsRemaining}</p>
           <p>
-            <span className="font-semibold">Plan:</span> {planData.plan}
-          </p>
-          <p>
-            <span className="font-semibold">Monthly Credits:</span>{" "}
-            {planData.monthlyCredits}
-          </p>
-          <p>
-            <span className="font-semibold">Credits Remaining:</span>{" "}
-            {planData.creditsRemaining}
-          </p>
-          <p>
-            <span className="font-semibold">Tool Access:</span>{" "}
+            Tool Access:{" "}
             {Array.isArray(planData.toolAccess)
               ? planData.toolAccess.join(", ")
               : planData.toolAccess}
-          </p>
-          <p>
-            <span className="font-semibold">Last Reset:</span>{" "}
-            {planData.lastReset || "Not set"}
           </p>
         </div>
       </div>

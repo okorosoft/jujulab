@@ -79,7 +79,7 @@ function FooterLogo() {
   if (imageError) {
     return (
       <div className="text-2xl font-bold text-white mb-4">
-        <span className="text-white">Juju</span>Study
+        <span className="text-white">Juju</span>Lab
       </div>
     );
   }
@@ -87,7 +87,7 @@ function FooterLogo() {
   return (
     <Image
       src="/logo.png"
-      alt="JujuStudy Logo"
+      alt="Jujulab Logo"
       width={150}
       height={40}
       className="h-10 w-auto mb-4"
