@@ -37,10 +37,14 @@ export async function getUserPlan(): Promise<UserPlanData | null> {
       ? publicMetadata.creditsRemaining
       : defaultPlan.monthlyCredits;
 
-  let toolAccess =
-    publicMetadata.toolAccess !== undefined
-      ? (publicMetadata.toolAccess as ToolAccess)
-      : defaultPlan.toolAccess;
+  let toolAccess: ToolAccess =
+  publicMetadata.toolAccess === "all" || publicMetadata.toolAccess === "core"
+    ? publicMetadata.toolAccess
+    : Array.isArray(publicMetadata.toolAccess)
+      ? [...publicMetadata.toolAccess]
+      : Array.isArray(defaultPlan.toolAccess)
+        ? [...defaultPlan.toolAccess]
+        : defaultPlan.toolAccess;
 
   const lastReset =
     typeof publicMetadata.lastReset === "string"
