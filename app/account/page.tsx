@@ -1,4 +1,4 @@
-"use client";
+ 
 import { getUserPlan } from "@/lib/get-user-plan";
 
 export default async function AccountPage() {
